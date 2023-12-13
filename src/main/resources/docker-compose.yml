@@ -1,0 +1,15 @@
+version: '2.17.3'
+networks:
+  main:
+services:
+  postgres:
+    image: postgres
+    container_name: my-database-container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: VDcom
+    ports:
+      - "5432:5432"
+    networks:
+      - main
